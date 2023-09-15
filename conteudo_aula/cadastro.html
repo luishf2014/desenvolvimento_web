@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página de cadastro</title>
+    <style>
+        p{
+            color: rgb(255, 0, 0);
+         text-align: center;
+        }
+        .button {
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        }
+        
+    </style>
+    
+
+</head>
+<body>
+    <h1><P>FAÇA SEU CADASTRO</P></h1>
+    <h1><form id="novo_usuario" action="/action_page" method="get">
+        <fieldset>
+            <center><legend style="color: blue;">Dados Pessoais</legend></center>
+                <label for="primeiro_nome">Nome</label>
+                <input name="primeiro_nome" type="text"/>
+                <br>
+                <label for="sobrenome">Sobrenome</label>
+                <input name="sobrenome" type="text"/>
+                <br>
+                <label>Data de Nascimento
+                    <input name="data" type="date"/>
+                </label>
+                <br>
+                <label>Email
+                    <input name="email" type="email"/>
+                </label>
+                <br>
+                <label>Senha
+                    <input name="Crie uma senha" type="password"/>
+                </label>
+                <br>
+                <label> Confirme a senha
+                    <input name="Repita a senha" type="password"> 
+                </label>
+            
+        </fieldset>
+    </form></h1>
+    
+    <center><a href="Principal.html"><button class="button">ENVIAR</button></a></center>
+</body>
+</html>
