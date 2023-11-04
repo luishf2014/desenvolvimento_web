@@ -1,0 +1,284 @@
+/*Zerar a página*/
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*Cabeçalho*/
+header {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    padding: 0;               
+}
+/*---------------------------------------------------------------------------------------*/
+.titulo{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*Barra de Navegação*/
+
+/*Mobile*/
+@media(max-width: 480px){
+    header {
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    .titulo{
+        background-color: #333;
+        color: white;
+    }        
+    .mobile-nav{
+        display: block;
+        margin: 10px;
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        width: 100%;        
+    }
+    nav.mobile-nav a {
+        display: inline;
+        margin: 10px;
+        width: 100%;
+    }
+    nav a {
+        background-color: #444;
+        color: white;
+        text-decoration: none;
+        margin: 0;
+        display: block;
+        width: 100%;
+        height: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    nav a:hover{
+        background-color: rgb(100, 100, 100);
+        opacity: 75%;
+    }
+    .imag{
+        align-items: center;
+        min-height: 250px; 
+        min-width: 260px;
+    }
+    main{
+        padding-top: 2px;
+        padding-bottom: 2px;
+        min-height: auto;
+        background-color: rebeccapurple;
+    }
+    .primeira{
+        height: 1000px;
+        border-radius: 5px;
+        grid-template-rows: repeat(5);
+        display: grid;
+    }   
+    .sombra{
+        height: 1000px;
+        background-color: white;
+        padding: 10px;
+        margin: 25px;           
+        border-radius: 10px;
+        box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.374);
+        
+    }
+    /*------------------------------------------------------------*/
+    .foto1{
+        grid-row: 1;
+        background-image: url(imagem\ grid1.jpg);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+    /*------------------------------------------------------------*/
+    .foto2{
+        background-image: url(imagem\ grid.webp);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*------------------------------------------------------------*/
+    .foto3{
+        
+        background-image: url(imagem\ site3.png);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*------------------------------------------------------------*/
+    .foto4{
+        
+        background-image: url(imagem\ grid2.jpg);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*------------------------------------------------------------*/
+    .foto5{
+        
+        background-image: url(imagem\ grid3.jpg);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .footer{
+        width: 100%;
+    }
+
+}
+
+/*------------------------------------------------------------*/
+/*Desktop*/
+@media(min-width: 481px){
+    .desktop-nav {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        width: auto;
+        justify-content: space-around;
+        position: sticky;
+        top: 0; 
+    
+    }
+    
+    nav.desktop-nav a {
+        display: inline;
+        margin: 10px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 10px;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 15px;
+    }
+    nav a:hover{
+        background-color: rgb(100, 100, 100);
+        opacity: 75%;
+    }
+    main{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 600px;
+    background-color: rebeccapurple;
+    }
+    .primeira{
+        height: 596px;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }   
+    .sombra{
+        height: 600px;
+        background-color: white;
+        width: 50%;
+        padding: 10px;
+        margin: 10px;           
+        border-radius: 10px;
+        box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.374);
+        margin: auto;
+
+    }
+    /*------------------------------------------------------------*/
+    .foto1{
+        grid-row: 1;
+        grid-column: 1;
+        background-image: url(imagem\ grid1.jpg);
+        background-size: 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*------------------------------------------------------------*/
+    .foto2{
+        background-image: url(imagem\ grid.webp);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: space-around;
+    }
+    /*------------------------------------------------------------*/
+    .foto3{
+        grid-row: 2; 
+        grid-column: 1/3;
+        background-image: url(imagem\ site.png);
+        background-size: 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*------------------------------------------------------------*/
+    .foto4{
+        grid-row: 3;
+        grid-column: 1;
+        background-image: url(imagem\ grid2.jpg);
+        background-size: 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*------------------------------------------------------------*/
+    .foto5{
+        grid-row: 3;
+        grid-column: 2;
+        background-image: url(imagem\ grid3.jpg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*------------------------------------------------------------*/
+}
+
+/*----------------------------------------------------------------------------------------*/
+/* Rodapé*/
+footer {
+    background-color: #444;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    width: auto;
+    margin: auto;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*Imagem Rodapé*/
+
+.redes-sociais {
+    flex: 1;
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+}
+
+.redes-sociais img {
+    width: 45px; /* Defina a largura desejada para as imagens */
+}
+.redes-sociais img:hover{
+   opacity: 60%;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*Direitos Autorais*/
+.direitos-autorais {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: auto;
+    width: auto;
+
+}
