@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Idade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: rgb(1, 88, 1);
+    }
+    main{      
+      background-color: white;
+      margin-left: 35%;
+      margin-right: 35%;
+      margin-top: 150px;
+    }
+    .button1 {
+      background-color: rgb(28, 151, 28);
+    border: none;
+    color: white;
+    padding: 16px 24px;
+    text-align: center;
+    font-size: 18px;
+    margin: 4px 2px;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  .button1:hover{
+    background-color: rgba(75, 124, 216, 0.5);
+  }
+    
+  </style>
+</head>
+<body>
+
+  <main>
+    <selection>
+      <br>
+      <h2>Calculadora de Idade</h2>
+
+      <label for="dataNascimento">Digite sua data de nascimento:</label>
+      <input type="date" id="dataNascimento">
+
+      <br><br>
+
+      <button onclick="calcularIdade()" class="button1">Calcular Idade</button>
+
+      <br><br>
+
+      <div id="resultado"></div>
+      <br>
+    </selection>
+  </main>
+  
+  <script>
+    function calcularIdade() {
+      // Para obtér a data de nascimento do input
+      const dataNascimento = document.getElementById('dataNascimento').value;
+
+      // Calcular a idade após a data informada pelo usuário
+      const hoje = new Date();
+      const dataNasc = new Date(dataNascimento);
+      const idade = hoje.getFullYear() - dataNasc.getFullYear();
+
+      // Verifica se já fez aniversário no ano atual
+      if (hoje.getMonth() < dataNasc.getMonth() || (hoje.getMonth() === dataNasc.getMonth() && hoje.getDate() < dataNasc.getDate())) {
+        idade--;
+      }
+
+      // Exibe o resultado na página
+      const resultadoElement = document.getElementById('resultado');
+      resultadoElement.innerHTML = `Sua idade é ${idade} anos.`;
+    }
+  </script>
+
+</body>
+</html>
