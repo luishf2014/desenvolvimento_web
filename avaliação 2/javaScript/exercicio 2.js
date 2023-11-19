@@ -45,7 +45,7 @@ const teste1 = {
         "Esporte": ["Futebol", "Basquete"],
         "Filmes": {
             "Genero": ["Ficção", "Drama"],
-            "Décadas": [1980, 2000]
+            "Décadas": [2000]
         }
     }
 };
